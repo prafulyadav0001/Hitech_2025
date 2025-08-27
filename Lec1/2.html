@@ -1,204 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Page ka character encoding set karta hai (UTF-8 means almost sabhi languages support) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Browser compatibility ke liye (mainly IE ke liye) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design ke liye, mobile me page proper scale hoga -->
     
-    <title>First Webpage</title>
+    <title>First Webpage</title> <!-- Title bar me dikhne wala naam -->
 </head>
 <body>
 
+<!-- ---------------- ANCHOR (LINKS) ---------------- -->
 
-<!-- ANCHOR Tag -->
-
-
-<a href="http://google.com" target="_blank"> Redirect to Google website</a>
-
-<BR><BR>
-
-<a href="http://facebook.com" target="_self"> Redirect to Facebook website</a>
+<!-- External site pe redirect karne ke liye -->
+<a href="http://google.com" target="_blank"> Redirect to Google website</a> <!-- target="_blank" means naya tab khulega -->
 
 <BR><BR>
 
-    <a href="mailto:abc@gmail.com"> GO TO EMAIL</a>
+<a href="http://facebook.com" target="_self"> Redirect to Facebook website</a> <!-- target="_self" means isi tab me khulega -->
 
 <BR><BR>
 
+<!-- Mail link (email open kar dega default mail app me) -->
+<a href="mailto:abc@gmail.com"> GO TO EMAIL</a>
+
+<BR><BR>
+
+<!-- Call link (phone dialer khulega agar mobile me ho) -->
 <a href="tel:999999999999"> GO TO TELEPHONE</a>
 
 <BR><BR>
 
-    <a href="#special">Go to Special para</a>
-
-<BR><BR>
-
-<a href="dummy.html#special-para">Go to other page special para</a>
-
-<BR><BR>
-
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p id="special"> Special Para Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa totam iste error consequuntur. Vero dolores dolorem veniam mollitia accusantium deserunt, voluptatibus aliquam quasi laborum voluptate deleniti ipsam natus? Enim.</p>
+<!-- Same page ke kisi section (id="special") pe jump karna -->
+<a href="#special">Go to Special para</a>
 
 <BR><BR>
 
 
-<br>
+
+<BR><BR>
+
+
+
+<br><br>
 <hr>
 <br>
 
 
-
-
+<!-- ---------------- HTML INPUTS ---------------- -->
 
 <h1> HTML INPUTS</h1>
 <br>
 
 <label for="username">username</label>
-<input type="text" placeholder="Username" id="username" disabled >
+<input type="text" placeholder="Username" id="username" disabled > <!-- disabled means user input nahi de sakta -->
 
-<br>
-<br>
+<br><br>
 
 Password:
-<input type="password" placeholder="Password">
-<br>
-<br>
+<input type="password" placeholder="Password"> <!-- password input (characters hidden) -->
+<br><br>
 
 Email:
-<input type="email" placeholder="Email">
-<br>
-<br>
+<input type="email" placeholder="Email"> <!-- email validation ke liye -->
+<br><br>
 
 Number:
-<input type="number" placeholder="0">
-<br>
-<br>
+<input type="number" placeholder="0"> <!-- sirf numbers input hoga -->
+<br><br>
 
-    Telephone:
-<input type="tel" placeholder="phone number" max>
-<br>
-<br>
+Telephone:
+<input type="tel" placeholder="phone number"> <!-- phone number ke liye -->
+<br><br>
 
 CheckBox:
-<input type="checkbox" checked >
-<br>
-<br>
-
+<input type="checkbox" checked > <!-- tick box (default checked hai) -->
+<br><br>
 
 Date:
-<input type="date" placeholder="Date">
-<br>
-<br>
+<input type="date"> <!-- calendar date picker -->
+<br><br>
 
 Time:
-<input type="time" placeholder="Username">
-<br>
-<br>
+<input type="time"> <!-- time picker -->
+<br><br>
 
 File:
-<input type="file" placeholder="Username">
-<br>
-<br>
+<input type="file"> <!-- file upload karne ka option -->
+<br><br>
 
 Color:
-<input type="color" placeholder="Username">
-<br>
-<br>
+<input type="color"> <!-- color picker -->
+<br><br>
 
 Bio:
-<textarea>
-
-</textarea>
-
-<br>
-<br>
+<textarea></textarea> <!-- multi-line text box -->
+<br><br>
 
 Gender:
-<br>
-<br>
-
+<br><br>
 Male:
-<input type="radio" name="gender">
+<input type="radio" name="gender"> <!-- radio button (sirf ek option select hoga same "name" ke andar) -->
 Female:
 <input type="radio" name="gender">
 Other:
 <input type="radio" name="gender">
-<br>
-<br>
+<br><br>
 
 Months:
-<select>
-    <option value="" >January</option>
-     <option value="">Febuary</option>
-     <option value="">March</option>
-     <option value="">April</option>
-     <option value="">May</option>
-     <option value="">June</option>
-     <option value="">July</option>
-     <option value="">August</option>
-     <option value="">September</option>
-     <option value="">October</option>
-     <option value="">November</option>
-     <option value="">December</option>
+<select> <!-- dropdown menu -->
+    <option>January</option>
+    <option>Febuary</option>
+    ...
+    <option>December</option>
 </select>
-
-
-<br>
-<br>
-
-
+<br><br>
 <hr>
 
 
+<!-- ---------------- MEDIA (IMAGE, AUDIO, VIDEO, IFRAME) ---------------- -->
 
+<img src="image_link" alt="this is an image" width="100px"> <!-- image dikhane ke liye -->
 
+<br><br>
 
-<img src = "https://images.unsplash3.com/photo-1657299156638-ffa9dac845b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="this is an image" width="100px">
+<audio src="" controls loop autoplay></audio> <!-- audio player (controls: play/pause buttons, loop: repeat, autoplay: auto start) -->
 
-<br>
-<br>
+<br><br>
 
-<audio src="" controls loops autoplay></audio>
+<video src="" controls></video> <!-- video player -->
 
-<br>
-<br>
+<br><br>
 
-<video src="" controls ></video>
+<!-- YouTube video embed -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M_Vl5pvLauE" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<br>
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M_Vl5pvLauE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-<br>
-
+<br><br>
 <hr>
 
-<h1> <u>HTML FORMS</u></h1>
 
+<!-- ---------------- HTML FORMS ---------------- -->
+
+<h1><u>HTML FORMS</u></h1>
 <br>
 
-<form>
-
-   <fieldset>
-    <legend>Login Info</legend>
-
+<form> <!-- form start -->
+   <fieldset> <!-- fieldset: form ko logical group me divide karne ke liye -->
+    <legend>Login Info</legend> <!-- group ka title -->
     <label for="Username">Username</label>
     <input type="text" name="MyUsername" id="Username" required>
-
     <label for="Password">Password</label>
     <input type="Password" name="Mypassword" id="Password" required>
    </fieldset>
@@ -208,29 +159,23 @@ Months:
     <legend>Contact Information</legend>
     <label for="email">Email I.D</label>
     <input type="email" name="MyEmail" id="email">
-
    </fieldset>
 
    <br>
-
-    <button type="submit">Submit</button>
-
+   <button type="submit">Submit</button> <!-- form submit button -->
 </form>
 
 <br><br> 
+<hr><br>
 
 
-<hr>
+<!-- ---------------- HTML TABLES ---------------- -->
 
-<br>
+<h1><u>HTML TABLES</u></h1>
 
+<table border="5" cellpadding="10" cellspacing="10" bgcolor="lightblue"> <!-- table banayi border, spacing aur background ke saath -->
 
-<h1><U>HTML TABLES</U></h1>
-
-<table border="5" cellpadding="10" cellspacing="10" bgcolor="lightblue">
-
-
-    <thead>
+    <thead> <!-- table ka header -->
         <tr>
             <th>Days/Periods</th>
             <th>1</th>
@@ -239,61 +184,50 @@ Months:
             <th>4</th>
         </tr>
     </thead>
-    <tbody>
-        
+
+    <tbody> <!-- table body -->
         <tr>
-        <th>Mon</th>
-        <td>GAMES</td>
-        <td>WEB DEV</td>
-        <td colspan="2">DSA</td>
-        <!-- <td >Mon</td> -->
+          <th>Mon</th>
+          <td>GAMES</td>
+          <td>WEB DEV</td>
+          <td colspan="2">DSA</td> <!-- colspan=2 matlab ek cell do columns ke barabar -->
         </tr>
 
         <tr>
-            <th>Tue</th>
-        <td>DSA</td>
-        <td>GAMES</td>
-        <td rowspan="2">WEB DEV</td>
-        <td>Mon</td>
+          <th>Tue</th>
+          <td>DSA</td>
+          <td>GAMES</td>
+          <td rowspan="2">WEB DEV</td> <!-- rowspan=2 matlab ek cell do rows ke barabar -->
+          <td>Mon</td>
         </tr>
         
         <tr>
-            <th>Wed</th>
-        <td>WEB DEV</td>
-        <td>DSA</td>
-        <td>GAMES</td>
-        <!-- <td>Mon</td> -->
+          <th>Wed</th>
+          <td>WEB DEV</td>
+          <td>DSA</td>
+          <td>GAMES</td>
         </tr>
-
     </tbody>
-    <tfoot>
-        <th colspan="5">
-            This is Super-150 schedule
-        </th>
+
+    <tfoot> <!-- table footer -->
+        <th colspan="5">This is Super-150 schedule</th>
     </tfoot>
 </table>
 
-<br><br>
-<hr>
-<br><br>
+<br><br><hr><br><br>
 
-<form action="https://www.google.com/search">
+
+<!-- ---------------- GOOGLE SEARCH FORM ---------------- -->
+
+<form action="https://www.google.com/search"> <!-- form submit hote hi google pe search hoga -->
     <h2> GOOGLE SEARCH</h2>
     <label for="Search">Enter text to search on google</label>
-    <input type="text" name="q" id="Search">
-
+    <input type="text" name="q" id="Search"> <!-- "q" google search query ka parameter hai -->
     <button type="submit">Search</button>
-    
 </form>
 
-<br>
-<br>
-
+<br><br>
 <hr>
-
-
- 
-
 
 </body>
 </html>
