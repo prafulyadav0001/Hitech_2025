@@ -1,0 +1,61 @@
+section{
+    background-color: orange;
+    border: 3px solid black;
+    height: 60vh;
+    width: 40vw;
+}
+/* 
+1st <section>:
+- background-color: orange → orange background.
+- border: 3px solid black → black outline.
+- height: 60vh → viewport ki height ka 60%.
+- width: 40vw → viewport ki width ka 40%.
+Responsive banane ke liye vh/vw useful hote hain.
+*/
+
+
+
+
+section div{
+    background-color: beige;
+    height: 40%;
+    width: 60%;
+}
+/* 
+Section ke andar jo <div> hai:
+- background-color: beige → halka cream color.
+- height: 40% → parent (section) ki height ka 40%.
+- width: 60% → parent (section) ki width ka 60%.
+(Yaha % parent ke dimension ke relative hota hai.)
+*/
+
+
+html{
+    font-size: 10px;
+}
+/* 
+Pure document ka base font-size 10px set kar diya.
+Default browser me 16px hota hai, ab base 10px ho gaya.
+(Rem unit isi base font-size pe depend karta hai.)
+*/
+
+
+article{
+    font-size: 20px;
+}
+/* 
+<article> ke liye font-size fix 20px.
+Ye px absolute unit hai, parent se independent.
+*/
+
+
+ul{
+    font-size: 2em;
+}
+/* 
+<UL> (unordered list) ke liye font-size: 2em.
+- 1em = current parent ka font-size.
+- Agar <ul> ek <article> ke andar hai (20px), 
+  toh 2em = 2 × 20px = 40px font-size.
+- Yani em parent ke font-size ke relative hota hai.
+*/

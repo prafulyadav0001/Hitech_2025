@@ -1,0 +1,24 @@
+div{
+    border:2px solid black;     
+    /* Har div ke around 2px ka solid black border aayega */
+
+    font-size: 1.8rem;          
+    /* Text ka size 1.8rem hoga (yaani root font-size ka 1.8x) */
+
+    padding: 10px 10px;         
+    /* Text ke andar 10px ki spacing upar-niche aur left-right */
+
+    margin: 20px;               
+    /* Har div ke bahar 20px ka gap hoga */
+
+    background-color:aqua;      
+    /* Background aqua (light blue) color ka hoga */
+
+    position: sticky;           
+    /* Sticky position lagayi hai (relative + fixed ka hybrid) */
+
+    top: 10px;                  
+    /* Jab scroll karoge to ye div apne container ke andar
+       top se 10px ki distance par chipak jayega (stick ho jayega). 
+       Lekin jaise hi container khatam hoga, sticky effect bhi khatam. */
+}

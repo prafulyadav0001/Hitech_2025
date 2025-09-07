@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+Universal selector (*):
+1. padding aur margin 0 kar diye → default spacing hata di.
+2. box-sizing: border-box → width/height calculate karte waqt border & padding ko include karega. 
+   Isse layout control easy ho jata hai.
+*/
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:"header header header"  
+                        "nav main sidebar" 
+                        "nav footer footer";
+
+    grid-template-columns:1fr 4fr 1fr;
+
+    grid-template-rows:70px 1fr 80px;
+}
+/* 
+Body ko grid container banaya:
+1. height: 100vh → poori viewport height.
+2. width: 100vw → poori viewport width.
+3. display: grid → grid layout active.
+4. grid-template-areas → yaha par layout ka design likha hai (3 rows me):
+   - Pehli row: "header header header" → header 3 columns ko cover karega.
+   - Dusri row: "nav main sidebar" → left me nav, beech me main, right me sidebar.
+   - Teesri row: "nav footer footer" → nav neeche tak stretch karega, aur footer do columns ko cover karega.
+5. grid-template-columns: 1fr 4fr 1fr → columns ki width:
+   - pehla column = 1 fraction
+   - doosra column = 4 fractions (sabse bada)
+   - teesra column = 1 fraction
+6. grid-template-rows: 70px 1fr 80px → rows ki height:
+   - pehli row = 70px (header)
+   - dusri row = 1fr (content area flexible height)
+   - teesri row = 80px (footer)
+*/
+
+
+header,nav,main,aside,footer{
+
+    /* height: 250px;
+    width: 250px; */
+    border: 1px solid skyblue;
+    background-color: steelblue;
+    color: white;
+    font-size: 1rem;
+    padding: 20px;
+
+}
+/* 
+Sabhi sections (header, nav, main, aside, footer) ke liye common styling:
+1. border: 1px solid skyblue → halka border dikhane ke liye.
+2. background-color: steelblue → background blue shade.
+3. color: white → text ka color white.
+4. font-size: 1rem → normal size ka text.
+5. padding: 20px → andar content ke chaaro taraf spacing.
+   (height/width commented hai kyunki grid me wo apne aap set ho rahi hai).
+*/
+
+
+header{
+    grid-area:header;
+}
+
+nav{
+    grid-area:nav;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: footer;
+}
+/* 
+Ye sab individual elements ko unke grid-area se bind kar rahe hain:
+1. header → grid-area: header (pehli row ka pura top part cover karega).
+2. nav → grid-area: nav (left column me top se bottom tak stretch hoga).
+3. main → grid-area: main (center content area).
+4. aside → grid-area: sidebar (right side wala column).
+5. footer → grid-area: footer (bottom 2 columns cover karega).
+*/

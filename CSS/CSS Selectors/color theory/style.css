@@ -1,0 +1,58 @@
+/* div{
+    height:150px;
+    width:150px;
+    border: 3px solid black;
+}
+
+div:nth-of-type(1){
+    background-color: #ffddd2;
+}
+
+div:nth-of-type(2){
+    background-color: rgb(44,244,32)
+}
+
+div:nth-of-type(3){
+    background-color: rgba(23,32,231,0.5);
+} */
+/* 
+Ye part abhi comment kiya hua hai.
+- Teen div banaye the 150x150px ke, black border ke sath.
+- nth-of-type se har div ka alag background color diya:
+   1st → light peach (#ffddd2),
+   2nd → green (rgb),
+   3rd → blue transparent (rgba with alpha 0.5).
+Yeh color formats (hex, rgb, rgba) ko demonstrate kar raha tha.
+*/
+
+
+p{
+
+    border: 3px solid black;
+    /* Har paragraph ke charo taraf 3px black border hoga */
+
+    width: 150px;
+    /* Paragraph ka width fix 150px hoga */
+
+    /* height:150px; */
+    /* Ye comment hai, agar active hota to height bhi fix ho jati */
+
+    /* margin: 50px; */
+    /* Agar ye hota to har taraf 50px ka margin lag jata */
+
+    /* margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px; */
+    /* Is tarah se individual sides ke liye margin set kar sakte hain */
+
+    margin: 40px auto;
+    /* Top-bottom: 40px, left-right: auto.
+       Auto ka matlab hai horizontally center align ho jana page ke andar. */
+
+    padding: 40px;
+    /* Paragraph ke andar ka content (text) 40px andar shift ho jayega */
+
+    text-align: center;
+    /* Text horizontally center align hoga box ke andar */
+}

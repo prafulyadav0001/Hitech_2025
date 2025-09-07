@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Sabhi elements ka default margin aur padding remove kar diya 
+   (ye CSS ka reset hota hai, jisse sab browser me same base mile) */
+
+.container{
+
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-auto-rows: 250px;
+    gap: 10px;
+
+    /* row-gap: 20px;
+    column-gap: 20px;
+     */
+     /* grid-template-rows: repeat(3,1fr); */
+
+     /* align-items: stretch; */
+
+     /* justify-content:end; */
+}
+/* 
+.container ek grid container hai:
+1. max-width: 960px → container ki max width 960px tak hogi.
+2. margin: 100px auto → upar niche 100px ka gap, aur left-right me auto center.
+3. padding: 10px → andar ki taraf thoda space.
+4. display: grid → grid layout activate ho gaya.
+5. grid-template-columns: repeat(auto-fill, minmax(300px,1fr)) 
+   → matlab grid columns automatic banenge, minimum 300px aur max 1fr width ke sath.
+   Ye responsive grid banane ka tareeka hai.
+6. grid-auto-rows: 250px → har row ki default height 250px hogi.
+7. gap: 10px → sab boxes ke beech 10px ka gap. 
+   (row-gap aur column-gap alag se bhi use kar sakte the)
+8. Neeche wale properties comment kiye hue hain, ye alignment aur layout control ke liye hain:
+   - row-gap aur column-gap → rows aur columns me alag gap.
+   - grid-template-rows → rows ki fixed height set karne ke liye.
+   - align-items aur justify-content → grid ke items ko vertically aur horizontally align karne ke liye.
+*/
+
+.box{
+
+    background-color:steelblue;
+    border: 2px solid lightblue;
+    color: white;
+    padding: 20px;
+
+}
+/* 
+Har box ke liye styling:
+1. background-color: steelblue → box ka background blue shade ka hoga.
+2. border: 2px solid lightblue → halka blue border.
+3. color: white → andar ka text white.
+4. padding: 20px → text aur box ke edge ke beech gap.
+*/
+
+/* .box:nth-of-type(2){
+    align-self: center;
+} */
+/* 
+nth-of-type(2) → doosra box target hoga aur align-self: center 
+   use karne se wo vertically apni grid cell ke beech me aa jayega.
+*/
+
+/* 
+.box:nth-of-type(1){
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* grid-column: 1/3;
+} */
+/* 
+nth-of-type(1) → pehla box select hoga.
+grid-column: 1/3 → iska matlab hai pehla box column 1 se start hoke 
+   column 3 tak spread hoga (yaani 2 columns occupy karega).
+*/
+
+/* .box:nth-of-type(3){
+    grid-row-start: 2;
+    grid-row-end: 4;
+} */ 
+/* 
+nth-of-type(3) → teesra box select hoga.
+grid-row-start: 2 aur grid-row-end: 4 → ye box row 2 se start hoke 
+   row 4 tak spread karega (matlab vertically 2 rows occupy karega).
+*/
+
+@media (max-width:540px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+/* 
+Media query: Agar screen width 540px se chhoti ho (mobile devices),
+   toh grid-template-columns: 1fr → har row me sirf ek column hoga,
+   matlab boxes stack ho jayenge vertically ek ke neeche ek.
+*/

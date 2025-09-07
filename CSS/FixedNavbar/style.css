@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* 
+Universal selector (*):
+Sabhi elements ka margin aur padding reset ho gaya → clean layout ke liye.
+*/
+
+
+nav{
+    font-size: 1.8rem;
+    background-color: #0077b6;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+/* 
+<nav> styling:
+- font-size: thoda bada text
+- background-color: blue shade (#0077b6)
+- position: fixed → navbar hamesha top me chipka rahega (scroll karne par bhi dikhai dega).
+- width: 100% → poori screen cover karega.
+- z-index: 1 → dusre elements ke upar rahega.
+*/
+
+
+nav ul li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+/* 
+<ul> ke andar <li> items ko "inline-block" kiya:
+- Ek line me side by side show honge (horizontal menu).
+- Padding diya for spacing.
+*/
+
+
+
+
+
+ul{
+    list-style: none;
+}
+/* 
+Default bullets (●) remove kar diye list se.
+*/
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/* 
+<a> links ka underline hata diya aur text color white kar diya → clean look ke liye.
+*/

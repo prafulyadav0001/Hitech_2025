@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+Universal selector (*):
+Sab elements ka default margin & padding reset kar diya → clean layout ke liye
+*/
+
+
+nav{
+    font-size: 1.6rem;                 /* Navbar ka text thoda bada */
+    display: flex;                     /* Flexbox use kiya layout ke liye */
+    justify-content: space-around;     /* Items ke beech equal space distribute */
+    background-color: #1d3557;         /* Dark blue navbar background */
+    padding: 12px 5px;                 /* Thoda andar ka gap diya */
+}
+
+
+nav a{
+    text-decoration: none;   /* Links ke underline hata diye */
+    color: white;            /* Link text ko white kar diya */
+}
+
+
+nav ul{
+    list-style: none;                  /* Default bullets remove kar diye */
+    display: flex;                     /* UL ko flexbox banaya */
+    width: 380px;                      /* Fix width rakha UL ka */
+    justify-content: space-between;    /* Items evenly spread (gap ke sath) */
+}
+
+
+@media screen and (max-width:530px){
+    nav,nav ul{
+        flex-direction: column;  /* Screen chhoti hone par column (vertical menu) */
+        align-items: center;     /* Items center align ho jayenge */
+    }
+}
