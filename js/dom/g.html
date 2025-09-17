@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing Game</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align:center; margin-top:50px; }
+    input, button { padding:8px; font-size:16px; margin:5px; }
+    #message { margin-top:20px; font-size:18px; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+  <h2>🎮 Number Guessing Game</h2>
+  <p>Guess a number between <b>1 and 100</b></p>
+
+  <input type="number" id="guess" placeholder="Enter your guess">
+  <button id="checkBtn">Check</button>
+  <button id="restartBtn">Restart</button>
+
+  <div id="message"></div>
+
+  <script>
+    let secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    const guessInput = document.getElementById("guess");
+    const checkBtn = document.getElementById("checkBtn");
+    const restartBtn = document.getElementById("restartBtn");
+    const message = document.getElementById("message");
+
+    checkBtn.addEventListener("click", () => {
+      const guess = Number(guessInput.value);
+      attempts++;
+
+      if (!guess || guess < 1 || guess > 100) {
+        message.textContent = "⚠️ Please enter a number between 1 and 100!";
+        return;
+      }
+
+      if (guess === secretNumber) {
+        message.textContent = `✅ Correct! You found it in ${attempts} attempts.`;
+        checkBtn.disabled = true;
+      } else if (guess < secretNumber) {
+        message.textContent = "⬆️ Too low! Try a bigger number.";
+      } else {
+        message.textContent = "⬇️ Too high! Try a smaller number.";
+      }
+
+      guessInput.value = "";
+      guessInput.focus();
+    });
+
+    restartBtn.addEventListener("click", () => {
+      secretNumber = Math.floor(Math.random() * 100) + 1;
+      attempts = 0;
+      message.textContent = "Game restarted! Guess again.";
+      checkBtn.disabled = false;
+      guessInput.value = "";
+      guessInput.focus();
+    });
+  </script>
+
+</body>
+</html>

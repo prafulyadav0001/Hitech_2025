@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggle</title>
+  <style>
+    /* body {
+      transition: background 0.3s, color 0.3s;
+      background: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    } */
+    body.dark {
+      background: #121212;
+      color: white;
+    }
+    /* button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: white;
+      font-size: 16px;
+    } */
+  </style>
+</head>
+<body>
+  <h1>Theme Changer Example</h1>
+  <button id="themeBtn">Toggle Theme</button>
+
+  <script>
+    const btn = document.getElementById("themeBtn");
+    const body = document.body;
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      // button ka text change karne ke liye
+      if (body.classList.contains("dark")) {
+        btn.textContent = "Switch to Light Theme";
+      } else {
+        btn.textContent = "Switch to Dark Theme";
+      }
+    });
+  </script>
+</body>
+</html>
