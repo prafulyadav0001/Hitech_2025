@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ---------------- HTML TABLES ---------------- -->
+
+<h1><u>HTML TABLES</u></h1>
+
+<table border="5" cellpadding="10" cellspacing="10" bgcolor="lightblue"> <!-- table banayi border, spacing aur background ke saath -->
+
+    <thead> <!-- table ka header -->
+        <tr>
+            <th>Days/Periods</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+    </thead>
+
+    <tbody> <!-- table body -->
+        <tr>
+          <th>Mon</th>
+          <td>GAMES</td>
+          <td>WEB DEV</td>
+          <td colspan="2">DSA</td> <!-- colspan=2 matlab ek cell do columns ke barabar -->
+        </tr>
+
+        <tr>
+          <th>Tue</th>
+          <td>DSA</td>
+          <td>GAMES</td>
+          <td rowspan="2">WEB DEV</td> <!-- rowspan=2 matlab ek cell do rows ke barabar -->
+          <td>Mon</td>
+        </tr>
+        
+        <tr>
+          <th>Wed</th>
+          <td>WEB DEV</td>
+          <td>DSA</td>
+          <td>GAMES</td>
+        </tr>
+    </tbody>
+
+    <tfoot> <!-- table footer -->
+        <th colspan="5">This is schedule</th>
+    </tfoot>
+</table>
+
+<br><br><hr><br><br>
+</body>
+</html>

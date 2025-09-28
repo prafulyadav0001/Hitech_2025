@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> <!-- Page ka character encoding set karta hai (UTF-8 means almost sabhi languages support) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Browser compatibility ke liye (mainly IE ke liye) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design ke liye, mobile me page proper scale hoga -->
+    
+    <title>First Webpage</title> <!-- Title bar me dikhne wala naam -->
+</head>
+<body>
+
+
+
+<!-- ---------------- HTML INPUTS ---------------- -->
+
+<h1> HTML INPUTS</h1>
+<br>
+
+<label for="username">username</label>
+<input type="text" placeholder="Username" id="username" disabled > <!-- disabled means user input nahi de sakta -->
+
+<br><br>
+
+Password:
+<input type="password" placeholder="Password"> <!-- password input (characters hidden) -->
+<br><br>
+
+Email:
+<input type="email" placeholder="Email"> <!-- email validation ke liye -->
+<br><br>
+
+Number:
+<input type="number" placeholder="0"> <!-- sirf numbers input hoga -->
+<br><br>
+
+Telephone:
+<input type="tel" placeholder="phone number"> <!-- phone number ke liye -->
+<br><br>
+
+CheckBox:
+<input type="checkbox" checked > <!-- tick box (default checked hai) -->
+<br><br>
+
+Date:
+<input type="date"> <!-- calendar date picker -->
+<br><br>
+
+Time:
+<input type="time"> <!-- time picker -->
+<br><br>
+
+File:
+<input type="file"> <!-- file upload karne ka option -->
+<br><br>
+
+Color:
+<input type="color"> <!-- color picker -->
+<br><br>
+
+Bio:
+<textarea></textarea> <!-- multi-line text box -->
+<br><br>
+
+Gender:
+<br><br>
+Male:
+<input type="radio" name="gender"> <!-- radio button (sirf ek option select hoga same "name" ke andar) -->
+Female:
+<input type="radio" name="gender">
+Other:
+<input type="radio" name="gender">
+<br><br>
+
+Months:
+<select> <!-- dropdown menu -->
+    <option>January</option>
+    <option>Febuary</option>
+    ...
+    <option>December</option>
+</select>
+<br><br>
+<hr>
+
+<!-- ---------------- HTML forms---------------- -->
+
+<h1><u>HTML FORMS</u></h1>
+<br>
+
+<form> <!-- form start -->
+   <fieldset> <!-- fieldset: form ko logical group me divide karne ke liye -->
+    <legend>Login Info</legend> <!-- group ka title -->
+    <label for="Username">Username</label>
+    <input type="text" name="MyUsername" id="Username" required>
+    <label for="Password">Password</label>
+    <input type="Password" name="Mypassword" id="Password" required>
+   </fieldset>
+   <br>
+
+   <fieldset>
+    <legend>Contact Information</legend>
+    <label for="email">Email I.D</label>
+    <input type="email" name="MyEmail" id="email">
+   </fieldset>
+
+   <br>
+   <button type="submit">Submit</button> <!-- form submit button -->
+</form>
+
+<br><br> 
+<hr><br>
+
+
+
+
+
+<!-- ---------------- GOOGLE SEARCH FORM ---------------- -->
+
+<form action="https://www.google.com/search"> <!-- form submit hote hi google pe search hoga -->
+    <h2> GOOGLE SEARCH</h2>
+    <label for="Search">Enter text to search on google</label>
+    <input type="text" name="q" id="Search"> <!-- "q" google search query ka parameter hai -->
+    <button type="submit">Search</button>
+</form>
+
+<br><br>
+<hr>
+
+</body>
+</html>
